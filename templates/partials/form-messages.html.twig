@@ -1,0 +1,13 @@
+{% if form.message %}
+    {% set status_mapping = {'success':'green', 'error': 'red', 'warning': 'yellow'} %}
+    {% set message = form.inline_errors and form.messages ? "FORM.VALIDATION_FAIL"|t : form.message %}
+    <div id="formMessage" class="notices {{ form.status }} {{ status_mapping[form.status] ?: 'green' }}"><p>{{ message|raw }}</p></div>
+{% set js %}
+$(document).ready(function() {
+    $('html, body').animate({
+        scrollTop: $('#formMessage').offset().top - 100
+    }, 2000);
+})
+{% endset %}
+{% do assets.addInlineJs(js, {'group': 'bottom'}) %}
+{% endif %}
