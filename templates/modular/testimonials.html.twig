@@ -1,0 +1,23 @@
+{% if page.header.testimonials %}
+<div class="testimonials"{%if page.header.background_image %} style="background-image: url({{ page.media.images[page.header.background_image].cache.url() }})"{% endif %}>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.4s">
+                <ul class="bxslider">
+                    {% for testimonial in page.header.testimonials %}
+                    <li>
+                        {% if page.header.opening_icon %}
+                            {{ page.media.images[page.header.opening_icon].cache.html() }}
+                        {% endif %}
+                        <p>{{ testimonial.testimonial }}</p>
+                        {% if page.header.closing_icon %}
+                            {{ page.media.images[page.header.closing_icon].cache.html() }}
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,37 @@
+{% set image_width = theme_config.blog_thumbnail_width|defined(600) %}
+{% set image_height = theme_config.blog_thumbnail_height|defined(450) %}
+
+<div class="container">
+    <div class="row">
+    {% for related_path, score in related_pages %}
+        {% set related = grav['pages'].get(related_path) %}
+        {% if related %}
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <article>
+                <a href="{{ related.url }}">
+                    <div class="img">
+                        {% if related.header.image and related.media.images[related.header.image]%}
+                            {% set image = related.header.image %}
+                        {% elseif related.media.images|length > 0 %}
+                            {% set image = related.media.images|first.filename %}
+                        {% endif %}
+                        {% if image %}
+                            {{ related.media.images[image].cropZoom(image_width, image_height).html('', related.title) }}
+                            <div class="imgDescription2">
+                                <img src="{{ url('theme://images/search.png') }}"/>
+                            </div>
+                        {% endif %}
+                    </div>
+                </a>
+                <div class="content">
+                    <h3><a href="{{ related.url }}">{{ related. title }}</a></h3>
+                    {% if related.header.list_summary %}
+                    <p>{{ related.header.list_summary }}</p>
+                    {% endif %}
+                </div>
+            </article>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>

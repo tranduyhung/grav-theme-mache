@@ -1,0 +1,18 @@
+<section class="cta3">
+    <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6">&nbsp;</div>
+            <div class="col-lg-6 col-sm-6 col-md-6 os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.4s">
+                <h2>{{ page.header.title }}</h2>
+                <span class="line"></span>
+                {{ content }}
+                <a href="{{ page.header.button_url }}">{{ page.header.button_label }}</a>
+            </div>
+        </div>
+    </div>
+    {% if page.header.image %}
+    <div class="safariimg os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.4s">
+        {{ page.media.images[page.header.image].cache.html }}
+    </div>
+    {% endif %}
+</section>

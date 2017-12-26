@@ -1,0 +1,17 @@
+title: Blog Post
+'@extends':
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            header.list_summary:
+              type: textarea
+              rows: 3
+              label: THEME_MACHE.LIST_SUMMARY
+              description: THEME_MACHE.LIST_SUMMARY_HELP

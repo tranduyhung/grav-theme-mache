@@ -1,0 +1,31 @@
+{% if page.header.blog_route %}
+    {% set blog = page.find(page.header.blog_route) %}
+
+    {% if blog %}
+        {% set quantity = page.header.blog_post_quantity|defined(6) %}
+        {% set collection = blog.collection({items: '@self.children', 'limit': quantity, 'order': {'by': 'date', 'dir': 'desc'}}) %}
+        {% set image_width = theme_config.blog_thumbnail_width|defined(600) %}
+        {% set image_height = theme_config.blog_thumbnail_height|defined(450) %}
+        <section class="updates">
+            <div class="container blog-list">
+                <div class="row">
+                    <div class="col-lg-12 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s">
+                        <h2>{{ page.header.title }}</h2>
+                        <span class="line"></span>
+                        <div class="top">{{ content }}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for child in collection %}
+                        {% include 'partials/blog_item.html.twig' with ({'p': child, 'image_width': image_width, 'image_height': image_height}) %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="{{ page.header.blog_route }}" class="showmore">{{ page.header.show_more_label }}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+{% endif %}

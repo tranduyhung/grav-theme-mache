@@ -1,0 +1,13 @@
+<div class="cta2"{% if page.header.background_image %} style="background-image: url({{ page.media.images[page.header.background_image].cache.url }})"{% endif %}>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.4s">
+                <h2>{{ page.header.title }}</h2>
+                <span class="line"></span>
+                {{ content }}
+                <a href="{{ page.header.button_url }}">{{ page.header.button_label }}</a>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,29 @@
+title: Banner
+'@extends':
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            header.heading:
+              type: text
+              label: THEME_MACHE.HEADING
+            header.background_image:
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              label: THEME_MACHE.BACKGROUND_IMAGE
+              accept:
+                - .png
+                - .jpg
+            header.button_label:
+              type: text
+              label: THEME_MACHE.BUTTON_LABEL
+            header.button_url:
+              type: text
+              label: THEME_MACHE.BUTTON_URL

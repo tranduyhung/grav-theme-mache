@@ -1,0 +1,29 @@
+title: Updates
+'@extends':
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            header.blog_route:
+              type: pages
+              label: THEME_MACHE.BLOG_ROUTE
+              show_all: false
+              show_modular: false
+              show_root: false
+            header.show_more_label:
+              type: text
+              label: THEME_MACHE.SHOW_MORE_LABEL
+            header.blog_post_quantity:
+              type: select
+              label: THEME_MACHE.BLOG_POST_QUANTITY
+              default: 6
+              options:
+                '3': '3'
+                '6': '6'
+                '9': '9'

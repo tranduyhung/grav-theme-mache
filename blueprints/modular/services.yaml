@@ -1,0 +1,30 @@
+title: Services
+'@extends':
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        services:
+          type: tab
+          title: THEME_MACHE.SERVICES
+          fields:
+            header.services:
+              type: list
+              label: THEME_MACHE.SERVICES
+              style: vertical
+              fields:
+                .icon:
+                  type: filepicker
+                  folder: '@self'
+                  preview_images: true
+                  label: THEME_MACHE.ICON
+                  accept:
+                    - .png
+                    - .jpg
+                .title:
+                  type: text
+                  label: THEME_MACHE.TITLE

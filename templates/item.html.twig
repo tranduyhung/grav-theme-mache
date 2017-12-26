@@ -1,0 +1,45 @@
+{% embed 'partials/base.html.twig' %}
+
+{% if page.header.image and page.media.images[page.header.image]%}
+    {% set image = page.header.image %}
+{% elseif page.media.images|length > 0 %}
+    {% set image = page.media.images|first.filename %}
+{% endif %}
+
+{% block content %}
+<div class="banner banner-alt"{% if image %} style="background-image: url({{ page.media.images[image].cache.url }})"{% endif %}>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.2s">{{ page.header.title }}</h1>
+                <span class="line os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-list">
+    <div class="container">
+        <div class="row content">
+            {{ content }}
+        </div>
+    </div>
+
+    {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+    <div class="related-posts">
+        <h2>{{ 'THEME_MACHE.RELATED_POSTS'|t }}</h2>
+        {% include 'partials/relatedpages.html.twig' %}
+    </div>
+    {% endif %}
+
+    {% if config.plugins.jscomments.enabled %}
+    <div class="container">
+        <div class="row">
+            {{ jscomments()|raw }}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% endembed %}

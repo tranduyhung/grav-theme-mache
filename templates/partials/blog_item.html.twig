@@ -1,0 +1,25 @@
+<div class="col-lg-4 col-sm-4 col-md-4 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.4s">
+    <article>
+        <a href="{{ p.url }}">
+            <div class="img">
+                {% if p.header.image and p.media.images[p.header.image]%}
+                    {% set image = p.header.image %}
+                {% elseif p.media.images|length > 0 %}
+                    {% set image = p.media.images|first.filename %}
+                {% endif %}
+                {% if image %}
+                    {{ p.media.images[image].cropZoom(image_width, image_height).html('', p.title) }}
+                    <div class="imgDescription2">
+                        <img src="{{ url('theme://images/search.png') }}"/>
+                    </div>
+                {% endif %}
+            </div>
+        </a>
+        <div class="content">
+            <h3><a href="{{ p.url }}">{{ p. title }}</a></h3>
+            {% if p.header.list_summary %}
+            <p>{{ p.header.list_summary }}</p>
+            {% endif %}
+        </div>
+    </article>
+</div>

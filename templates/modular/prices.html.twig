@@ -1,0 +1,31 @@
+<div class="price">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.4s">
+                <h2>{{ page.header.title }}</h2>
+                <span class="line"></span>
+                <div class="top">{{ content }}</div>
+            </div>
+        </div>
+
+        {% if page.header.prices %}
+        <div class="row">
+            {% for price in page.header.prices %}
+            <div class="col-lg-3 col-sm-6 col-md-3 os-animation" data-os-animation="slideInLeft" data-os-animation-delay="0.5s">
+                <div class="price-container">
+                    <div class="black">
+                        <h2><span>{{ page.header.currency }}</span>{{ price.amount }}</h2>
+                        <p>{{ price.interval }}</p>
+                    </div>
+                    <h4>{{ price.title }}</h4>
+                    {% for feature in price.features %}
+                    <p>{{ feature.title }}</p>
+                    {% endfor %}
+                    <a href="{{ price.buy_button_url }}">{{ page.header.buy_button_label }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>

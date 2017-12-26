@@ -1,0 +1,16 @@
+<ul>
+{% if page.template == 'modular' %}
+    {% for module in page.collection() if module.header.menu %}
+    <li class="menu-item{% if loop.index == 1 %} active{% endif %}">
+        <a href="{% if loop.index == 1 %}{{ page.url }}{% else %}#{{ module.folder|trim('_') }}{% endif %}" data-scroll>{{ module.header.menu }}</a>
+    </li>
+    {% endfor %}
+{% else %}
+    {% for p in pages.children.visible %}
+    {% set current_page = (p.active or p.activeChild) ? ' active' : '' %}
+    <li class="menu-item{{ current_page }}">
+        <a href="{{ p.url }}">{{ p.menu }}</a>
+    </li>
+    {% endfor %}
+{% endif %}
+</ul>

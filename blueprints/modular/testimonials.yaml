@@ -1,0 +1,47 @@
+title: Testimonials
+'@extends':
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        testimonials:
+          type: tab
+          title: THEME_MACHE.TESTIMONIALS
+          fields:
+            header.opening_icon:
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              label: THEME_MACHE.OPENING_ICON
+              accept:
+                - .png
+                - .jpg
+            header.closing_icon:
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              label: THEME_MACHE.CLOSING_ICON
+              accept:
+                - .png
+                - .jpg
+            header.background_image:
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              label: THEME_MACHE.BACKGROUND_IMAGE
+              accept:
+                - .png
+                - .jpg
+            header.testimonials:
+              type: list
+              label: THEME_MACHE.TESTIMONIALS
+              style: vertical
+              fields:
+                .testimonial:
+                  type: textarea
+                  rows: 3
+                  label: THEME_MACHE.TESTIMONIAL

@@ -1,0 +1,53 @@
+{% extends 'partials/simplesearch_base.html.twig' %}
+
+{% block content %}
+{% set image = '' %}
+{% if theme_config.default_background_image|length > 0 %}
+    {% for item in theme_config.default_background_image %}
+        {% set image = item.name %}
+    {% endfor %}
+{% endif %}
+{% set image_width = theme_config.blog_thumbnail_width|defined(600) %}
+{% set image_height = theme_config.blog_thumbnail_height|defined(450) %}
+<div class="banner banner-alt"{% if image %} style="background-image: url({{ url('theme://images/' ~ image) }})"{% endif %}>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>{{ page.title }}</h1>
+                <span class="line"></span>
+                <div class="top">
+                {% if query %}
+                <p>
+                    {% set count = search_results ? search_results.count : 0 %}
+                    {% if count == 1 %}
+                        {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query)|raw }}
+                    {% else %}
+                        {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query, count)|raw }}
+                    {% endif %}
+                </p>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="blog">
+    <div class="container">
+        {% if config.plugins.simplesearch.enabled %}
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                {% include 'partials/simplesearch_searchbox.html.twig' %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="blog-container">
+            <div class="row">
+                {% for page in search_results %}
+                    {% include 'partials/blog_item.html.twig' with ({'p': page, 'image_width': image_width, 'image_height': image_height}) %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

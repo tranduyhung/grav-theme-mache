@@ -1,0 +1,33 @@
+title: Features
+'@extends':
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        features:
+          type: tab
+          title: THEME_MACHE.FEATURES
+          fields:
+            header.features:
+              type: list
+              label: THEME_MACHE.FEATURES
+              style: vertical
+              fields:
+                .icon:
+                  type: filepicker
+                  folder: '@self'
+                  preview_images: true
+                  label: THEME_MACHE.ICON
+                  accept:
+                    - .png
+                    - .jpg
+                .title:
+                  type: text
+                  label: THEME_MACHE.TITLE
+                .description:
+                  type: text
+                  label: THEME_MACHE.DESCRIPTION

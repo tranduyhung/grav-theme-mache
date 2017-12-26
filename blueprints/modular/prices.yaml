@@ -1,0 +1,41 @@
+title: Prices
+'@extends':
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        prices:
+          type: tab
+          title: THEME_MACHE.PRICES
+          fields:
+            header.currency:
+              type: text
+              label: THEME_MACHE.CURRENCY
+            header.buy_button_label:
+              type: text
+              label: THEME_MACHE.BUY_BUTON_LABEL
+            header.prices:
+              type: list
+              label: THEME_MACHE.PRICES
+              style: vertical
+              fields:
+                .amount:
+                  type: text
+                  label: THEME_MACHE.AMOUNT
+                .interval:
+                  type: text
+                  label: THEME_MACHE.INTERVAL
+                .buy_button_url:
+                  type: text
+                  label: THEME_MACHE.BUY_BUTTON_URL
+                .features:
+                  type: list
+                  label: THEME_MACHE.FEATURES
+                  fields:
+                    .title:
+                      type: text
+                      label: THEME_MACHE.TITLE

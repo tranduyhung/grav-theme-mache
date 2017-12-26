@@ -1,0 +1,21 @@
+<div class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
+            <h2>{{ page.header.title }}</h2>
+            <span class="line"></span>
+            {{ content }}
+        </div>
+        </div>
+        {% if page.header.services %}
+        <div class="row">
+            {% for service in page.header.services %}
+            <div class="col-lg-3 col-sm-6 col-md-3 os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.4s">
+                {{ page.media.images[service.icon].cache.html() }}
+                <h3>{{ service.title }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>

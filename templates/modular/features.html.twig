@@ -1,0 +1,23 @@
+{% if page.header.features %}
+<section class="features">
+    <div class="container">
+        <div class="row">
+            {% for feature in page.header.features %}
+            <div class="col-lg-4 col-sm-4 col-md-4 os-animation" data-os-animation="bounceIn" data-os-animation-delay="0.3s">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-4 col-md-4">
+                        {% if feature.icon %}
+                        {{ page.media.images[feature.icon].cache.html }}
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8">
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,51 @@
+en:
+    THEME_MACHE:
+        FAVICON: favicon
+        FAVICON_HELP: favicon is uploaded to user/themes/mache/images folder.
+        LOGO: Logo
+        LOGO_HELP: Logo is uploaded to user/themes/mache/images folder.
+        LEFT_FOOTER: Left Footer
+        LEFT_FOOTER_HELP: Info shown on the left side of footer.
+        RIGHT_FOOTER: Right Footer
+        RIGHT_FOOTER_HELP: Info shown on the right side of footer.
+        RELATED_POSTS: Related Posts
+        BLOG_THUMBNAIL_WIDTH: Blog Post Thumbnail's Width
+        BLOG_THUMBNAIL_WIDTH_HELP: Thumbnail of blog post is cropped to this width by Grav's cropZoom function.
+        BLOG_THUMBNAIL_HEIGHT: Blog Post Thumbnail's Height
+        BLOG_THUMBNAIL_HEIGHT_HELP: Thumbnail of blog post is cropped to this height by Grav's cropZoom function.
+        DEFAULT_BACKGROUND_IMAGE: Default Background Image
+        DEFAULT_BACKGROUND_IMAG_HELP: Image is uploaded to user/themes/mache/images folder.
+        RIGHT_IMAGE: Right Image
+        RIGHT_IMAGE_ALT: Right Image's Alt Text
+        LINK_LABEL: Link's Label
+        LINK_URL: Link's URL
+        BACKGROUND_IMAGE: Background Image
+        HEADING: Heading
+        BUTTON_LABEL: Button's Label
+        BUTTON_URL: Button's URL
+        IMAGE: Image
+        FEATURES: Features
+        ICON: Icon
+        TITLE: Title
+        DESCRIPTION: Description
+        LATITUDE: Latitude
+        LONGITUDE: Longitude
+        GOOGLE_MAPS_API_KEY: Google Maps API Key
+        ZOOM: Zoom Level
+        GOOGLE_MAPS: Google Maps
+        CURRENCY: Currency
+        BUY_BUTON_LABEL: Buy Button's Label
+        BUY_BUTTON_URL: Buy Button's URL
+        AMOUNT: Amount
+        INTERVAL: Interval
+        PRICES: Prices
+        SERVICES: Services
+        TESTIMONIALS: Testimonials
+        TESTIMONIAL: Testimonial
+        OPENING_ICON: Opening Icon
+        CLOSING_ICON: Closing Icon
+        BLOG_ROUTE: Blog Page
+        SHOW_MORE_LABEL: Show More Link's Label
+        BLOG_POST_QUANTITY: Blog Post Quantity
+        LIST_SUMMARY: Short Summary
+        LIST_SUMMARY_HELP: Short summary shown in blog post list.

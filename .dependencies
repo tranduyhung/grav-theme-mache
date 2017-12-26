@@ -1,0 +1,18 @@
+git:
+    error:
+        url: https://github.com/getgrav/grav-plugin-error
+        path: user/plugins/error
+        branch: master
+    problems:
+        url: https://github.com/getgrav/grav-plugin-problems
+        path: user/plugins/problems
+        branch: master
+links:
+    error:
+        src: grav-plugin-error
+        path: user/plugins/error
+        scm: github
+    problems:
+        src: grav-plugin-problems
+        path: user/plugins/problems
+        scm: github
