@@ -145,6 +145,9 @@ nav ul li a:hover {
 	padding-bottom: 55px;
 }
 .banner a {
+    color: #ed145b;
+}
+.banner .button-container a {
 	width: 200px;
 	height: 50px;
 	line-height: 50px;
@@ -154,7 +157,7 @@ nav ul li a:hover {
 	color: #fff;
 	font-weight: 700;
 }
-.banner a:hover {
+.banner .button-container a:hover {
 	background: #fff;
 	color: #ed145b;
 	transition: all 0.4s;

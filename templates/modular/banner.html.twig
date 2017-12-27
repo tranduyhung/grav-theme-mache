@@ -6,7 +6,9 @@
                 <span class="line os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s"></span>
                 <div class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.4s">{{ content }}</div>
                 {% if page.header.button_url %}
-                <a href="{{ page.header.button_url }}" class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">{{ page.header.button_label }}</a>
+                <div class="button-container">
+                    <a href="{{ page.header.button_url }}" class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">{{ page.header.button_label }}</a>
+                </div>
                 {% endif %}
             </div>
         </div>
