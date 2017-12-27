@@ -5,8 +5,8 @@
                 <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.2s">{{ page.header.heading }}</h1>
                 <span class="line os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s"></span>
                 <div class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.4s">{{ content }}</div>
-                {% if button_url %}
-                <a href="{{ button_url }}" class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">{{ button_label }}</a>
+                {% if page.header.button_url %}
+                <a href="{{ page.header.button_url }}" class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">{{ page.header.button_label }}</a>
                 {% endif %}
             </div>
         </div>

@@ -1,3 +1,9 @@
+# v1.0.2
+## 27/12/2017
+
+1. [](#bugfix)
+    * Fixed missing button in banner
+
 # v1.0.1
 ## 26/12/2017
 
