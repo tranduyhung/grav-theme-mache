@@ -1,12 +1,18 @@
 <section class="cta3">
     <div class="container">
           <div class="row">
+             {% if page.header.image %}
             <div class="col-lg-6 col-sm-6 col-md-6">&nbsp;</div>
             <div class="col-lg-6 col-sm-6 col-md-6 os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.4s">
+            {% else %}
+            <div class="os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.4s">
+            {% endif %}
                 <h2>{{ page.header.title }}</h2>
                 <span class="line"></span>
                 {{ content }}
+                {% if page.header.button_url %}
                 <a href="{{ page.header.button_url }}">{{ page.header.button_label }}</a>
+                {% endif %}
             </div>
         </div>
     </div>
