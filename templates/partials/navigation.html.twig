@@ -2,7 +2,7 @@
 {% if page.template == 'modular' %}
     {% for module in page.collection() if module.header.menu %}
     <li class="menu-item{% if loop.index == 1 %} active{% endif %}">
-        <a href="{% if loop.index == 1 %}{{ page.url }}{% else %}#{{ module.folder|trim('_') }}{% endif %}" data-scroll>{{ module.header.menu }}</a>
+        <a href="#{{ module.folder|trim('_') }}" data-scroll>{{ module.header.menu }}</a>
     </li>
     {% endfor %}
 {% else %}
