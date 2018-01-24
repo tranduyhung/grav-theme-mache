@@ -29,6 +29,9 @@ form:
                 .interval:
                   type: text
                   label: THEME_MACHE.INTERVAL
+                .title:
+                  type: text
+                  label: THEME_MACHE.TITLE
                 .buy_button_url:
                   type: text
                   label: THEME_MACHE.BUY_BUTTON_URL
