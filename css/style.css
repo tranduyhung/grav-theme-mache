@@ -186,8 +186,9 @@ nav ul li a:hover {
 	width: 50%;
 }
 .laptop img {
-	width: 100%;
+	max-width: 100%;
 	display: block;
+	height: 392px;
 }
 .video a {
 	color: #ed145b;
@@ -443,7 +444,10 @@ button.button {
 .safariimg{position:absolute;     top: 7%;
     left: 3%;
     width: 43%;}
-.safariimg img{width:100%; display:block;}
+.safariimg img{max-width:100%; display:block;}
+@media only screen and (min-width: 1200px) {
+	.safariimg img {float: right; height: 428px;}
+}
 footer{
 	padding:55px 0;
 	color:#fff;
