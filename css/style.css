@@ -382,7 +382,7 @@ nav ul li a:hover {
 	text-align: center;
 	visibility: hidden;
 	opacity: 0;
-	padding-top: 25%;
+	padding-top: 28.5%;
 	transition: all 0.5s;
 	cursor: pointer;/*remove comment if you want a gradual transition between states
   -webkit-transition: visibility opacity 0.2s;
