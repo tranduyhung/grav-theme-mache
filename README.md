@@ -6,6 +6,10 @@ Mache theme is a port of [Mache](https://freetemplates.pro/downloads/mache-html-
 
 Mache HTML template doesn't include designs for blog and contact form. To make this Grav theme more useful, the author of this Grav theme added a blog and a contact form based on the styles provided by Mache HTML template. The blog and the form are pretty basic. Please feel free to extend and submit pull requests if you want to share your works.
 
+## Demo
+
+A demo of this theme can be found here: [grav-theme-mache.flatfiledeveloper.com](https://grav-theme-mache.flatfiledeveloper.com).
+
 ## Features
 
 ### Grav Features:

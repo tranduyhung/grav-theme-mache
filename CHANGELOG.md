@@ -1,3 +1,12 @@
+# v1.0.4
+## 18/03/2018
+
+1. [](#bugfix)
+    * Fixed image issue (thanks to trangthaonguyen)
+    * Fixed missing pricing title (thanks to DevilsDaddy)
+2. [](#improved)
+    * Centered search icon (thanks to RobLui)
+
 # v1.0.3
 ## 02/01/2018
 
