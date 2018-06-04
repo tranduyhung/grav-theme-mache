@@ -73,7 +73,7 @@ span.line {
 	background: #ed145b;
 }
 header,
-div.header {
+.header {
 	position: absolute;
 	left: 0;
 	right: 0;

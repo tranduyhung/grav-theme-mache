@@ -44,7 +44,7 @@
             <div class="box loading"></div>
         </div>
 
-        {% if page.template == 'modular' %}<header>{% else %}<div class="header">{% endif %}
+        <header>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-        {% if page.template == 'modular' %}</header>{% else %}</div>{% endif %}
+        </header>
 
         {% block content %}
             {{ content}}
@@ -83,9 +83,7 @@
             {% do assets.addJs('jquery', 101) %}
             {% do assets.addJs('theme://js/jquery.bxslider.js') %}
             {% do assets.addJs('theme://js/script.js') %}
-            {% if page.template == 'modular' %}
             {% do assets.addJs('theme://js/fixed-responsive-nav.js') %}
-            {% endif %}
             {% do assets.addJs('theme://js/waypoints.min.js') %}
         {% endblock %}
         {{ assets.js() }}
