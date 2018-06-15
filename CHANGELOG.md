@@ -1,3 +1,10 @@
+# v1.0.6
+## 15/06/2018
+
+1. [](#bugfix)
+    * Fixed logo link not clickable
+    * Fixed styling issue (#15).
+
 # v1.0.5
 ## 05/06/2018
 
