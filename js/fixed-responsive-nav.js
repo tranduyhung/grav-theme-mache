@@ -1779,6 +1779,7 @@ window.smoothScroll = (function (window, document, undefined) {
     };
 
     // Select the right navigation item when tapping the logo
+    /*
     document.querySelector(".logo a").addEventListener("click", function (e) {
       e.preventDefault();
       wasNavigationTapped = true;
@@ -1797,6 +1798,7 @@ window.smoothScroll = (function (window, document, undefined) {
       // Clear wasNavigationTapped check
       clearTapCheck();
     }, false);
+    */
 
     // When a navigation item is tapped, select it and begin scrolling
     forEach(links, function (i, el) {
