@@ -8,7 +8,7 @@
                     {% set image = p.media.images|first.filename %}
                 {% endif %}
                 {% if image %}
-                    {{ p.media.images[image].cropZoom(image_width, image_height).html('', p.title) }}
+                    {{ p.media.images[image].cropZoom(image_width, image_height).html('', p.title)|raw }}
                     <div class="imgDescription2">
                         <img src="{{ url('theme://images/search.png') }}"/>
                     </div>
@@ -18,7 +18,7 @@
         <div class="content">
             <h3><a href="{{ p.url }}">{{ p. title }}</a></h3>
             {% if p.header.list_summary %}
-            <p>{{ p.header.list_summary }}</p>
+            <p>{{ p.header.list_summary|raw }}</p>
             {% endif %}
         </div>
     </article>

@@ -9,7 +9,7 @@
             {% endif %}
                 <h2>{{ page.header.title }}</h2>
                 <span class="line"></span>
-                {{ content }}
+                {{ content|raw }}
                 {% if page.header.button_url %}
                 <a href="{{ page.header.button_url }}">{{ page.header.button_label }}</a>
                 {% endif %}

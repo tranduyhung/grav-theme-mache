@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.2s">{{ page.header.title }}</h1>
+                <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.2s">{{ page.header.title|raw }}</h1>
                 <span class="line os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s"></span>
             </div>
         </div>
@@ -21,7 +21,7 @@
 <div class="blog-list">
     <div class="container">
         <div class="row content">
-            {{ content }}
+            {{ content|raw }}
         </div>
     </div>
 

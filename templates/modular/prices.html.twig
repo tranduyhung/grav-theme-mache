@@ -2,9 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.4s">
-                <h2>{{ page.header.title }}</h2>
+                <h2>{{ page.header.title|raw }}</h2>
                 <span class="line"></span>
-                <div class="top">{{ content }}</div>
+                <div class="top">{{ content|raw }}</div>
             </div>
         </div>
 
@@ -17,9 +17,9 @@
                         <h2><span>{{ page.header.currency }}</span>{{ price.amount }}</h2>
                         <p>{{ price.interval }}</p>
                     </div>
-                    <h4>{{ price.title }}</h4>
+                    <h4>{{ price.title|raw }}</h4>
                     {% for feature in price.features %}
-                    <p>{{ feature.title }}</p>
+                    <p>{{ feature.title|raw }}</p>
                     {% endfor %}
                     <a href="{{ price.buy_button_url }}">{{ page.header.buy_button_label }}</a>
                 </div>

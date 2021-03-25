@@ -7,12 +7,12 @@
                 <div class="row">
                     <div class="col-lg-3 col-sm-4 col-md-4">
                         {% if feature.icon %}
-                        {{ page.media.images[feature.icon].cache.html }}
+                        {{ page.media.images[feature.icon].cache.html|raw }}
                         {% endif %}
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8">
-                        <h3>{{ feature.title }}</h3>
-                        <p>{{ feature.description }}</p>
+                        <h3>{{ feature.title|raw }}</h3>
+                        <p>{{ feature.description|raw }}</p>
                     </div>
                 </div>
             </div>

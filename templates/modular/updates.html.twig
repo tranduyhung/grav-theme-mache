@@ -10,9 +10,9 @@
             <div class="container blog-list">
                 <div class="row">
                     <div class="col-lg-12 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s">
-                        <h2>{{ page.header.title }}</h2>
+                        <h2>{{ page.header.title|raw }}</h2>
                         <span class="line"></span>
-                        <div class="top">{{ content }}</div>
+                        <div class="top">{{ content|raw }}</div>
                     </div>
                 </div>
                 <div class="row">

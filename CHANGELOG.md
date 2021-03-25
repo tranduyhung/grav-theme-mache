@@ -1,3 +1,9 @@
+# v1.0.7
+## 03/25/2021
+
+1. [](#bugfix)
+    * Added raw filter for Grav 1.7 compatibility
+
 # v1.0.6
 ## 15/06/2018
 
@@ -7,6 +13,7 @@
 
 # v1.0.5
 ## 05/06/2018
+
 
 1. [](#bugfix)
     * Fixed menu issue in blog (thanks to @trangthaonguyen)

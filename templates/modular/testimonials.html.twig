@@ -7,11 +7,11 @@
                     {% for testimonial in page.header.testimonials %}
                     <li>
                         {% if page.header.opening_icon %}
-                            {{ page.media.images[page.header.opening_icon].cache.html() }}
+                            {{ page.media.images[page.header.opening_icon].cache.html()|raw }}
                         {% endif %}
-                        <p>{{ testimonial.testimonial }}</p>
+                        <p>{{ testimonial.testimonial|raw }}</p>
                         {% if page.header.closing_icon %}
-                            {{ page.media.images[page.header.closing_icon].cache.html() }}
+                            {{ page.media.images[page.header.closing_icon].cache.html()|raw }}
                         {% endif %}
                     </li>
                     {% endfor %}

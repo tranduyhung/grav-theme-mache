@@ -16,10 +16,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.2s">{{ page.header.title }}</h1>
+                <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.2s">{{ page.header.title|raw }}</h1>
                 <span class="line os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s"></span>
                 {% if content is not empty %}
-                <div class="top">{{ content }}</div>
+                <div class="top">{{ content|raw }}</div>
                 {% endif %}
             </div>
         </div>
