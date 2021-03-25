@@ -36,7 +36,7 @@
             {% do assets.addCss('theme://css/responsive.css') %}
             {% do assets.addCss('theme://css/animate.css') %}
         {% endblock %}
-        {{ assets.css() }}
+        {{ assets.css()|raw }}
     </head>
 
     <body>
@@ -63,7 +63,7 @@
         </header>
 
         {% block content %}
-            {{ content}}
+            {{ content|raw }}
         {% endblock %}
 
         <footer>
@@ -86,7 +86,7 @@
             {% do assets.addJs('theme://js/fixed-responsive-nav.js') %}
             {% do assets.addJs('theme://js/waypoints.min.js') %}
         {% endblock %}
-        {{ assets.js() }}
-        {{ assets.js('bottom') }}
+        {{ assets.js()|raw }}
+        {{ assets.js('bottom')|raw }}
     </body>
 </html>
