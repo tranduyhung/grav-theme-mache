@@ -81,10 +81,10 @@
 
         {% block javascripts %}
             {% do assets.addJs('jquery', 101) %}
-            {% do assets.addJs('theme://js/jquery.bxslider.js') %}
+            {% do assets.addJs('theme://js/jquery.bxslider.min.js') %}
             {% do assets.addJs('theme://js/script.js') %}
             {% do assets.addJs('theme://js/fixed-responsive-nav.js') %}
-            {% do assets.addJs('theme://js/waypoints.min.js') %}
+            {% do assets.addJs('theme://js/jquery.waypoints.min.js') %}
         {% endblock %}
         {{ assets.js()|raw }}
         {{ assets.js('bottom')|raw }}
