@@ -18,7 +18,7 @@
     </div>
     {% if page.header.image %}
     <div class="safariimg os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.4s">
-        {{ page.media.images[page.header.image].cache.html }}
+        {{ page.media.images[page.header.image].cache.html|raw }}
     </div>
     {% endif %}
 </section>
