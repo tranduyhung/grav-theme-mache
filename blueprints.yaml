@@ -1,13 +1,13 @@
 name: Mache
 description: "Grav Theme based on Mache HTML theme by freetemplates.pro, original PSD design by symu.co."
-version: 1.0.7
+version: 1.0.8
 icon: empire
 author:
   name: Hung Tran
   email: flatfiledeveloper@gmail.com
   url: https://flatfiledeveloper.com
 homepage: https://github.com/tranduyhung/grav-theme-mache
-demo: http://www.peaceofmindwebsite.com/skeletons/mache
+demo: https://grav-theme-mache.flatfiledeveloper.com/
 keywords: mache, theme, template, responsive, html5, css3, one, single, page, bootstrap
 bugs: https://github.com/tranduyhung/grav-theme-mache/issues
 license: MIT

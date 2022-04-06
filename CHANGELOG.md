@@ -1,3 +1,9 @@
+# v1.0.8
+## 04/06/2022
+
+1. [](#bugfix)
+    * Bug fixes and improvements
+
 # v1.0.7
 ## 03/25/2021
 
@@ -5,21 +11,21 @@
     * Added raw filter for Grav 1.7 compatibility
 
 # v1.0.6
-## 15/06/2018
+## 06/15/2018
 
 1. [](#bugfix)
     * Fixed logo link not clickable
     * Fixed styling issue (#15).
 
 # v1.0.5
-## 05/06/2018
+## 06/05/2018
 
 
 1. [](#bugfix)
     * Fixed menu issue in blog (thanks to @trangthaonguyen)
 
 # v1.0.4
-## 18/03/2018
+## 03/18/2018
 
 1. [](#bugfix)
     * Fixed image issue (thanks to @trangthaonguyen)
@@ -28,7 +34,7 @@
     * Centered search icon (thanks to @RobLui)
 
 # v1.0.3
-## 02/01/2018
+## 01/02/2018
 
 1. [](#bugfix)
     * Fixed contact section
@@ -38,19 +44,19 @@
     * Improved link in baner
 
 # v1.0.2
-## 27/12/2017
+## 12/27/2017
 
 1. [](#bugfix)
     * Fixed missing button in banner
 
 # v1.0.1
-## 26/12/2017
+## 12/26/2017
 
 1. [](#improved)
     * Improved handling form error
 
 # v1.0.0
-## 26/12/2017
+## 12/26/2017
 
 1. [](#new)
     * First release
